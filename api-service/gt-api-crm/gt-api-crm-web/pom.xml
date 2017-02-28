@@ -40,7 +40,12 @@
             <groupId>com.thetransactioncompany</groupId>
             <artifactId>cors-filter</artifactId>
             <version>1.9.2</version>
-        </dependency>                
+        </dependency>   
+        <dependency>
+            <groupId>gt.com.api.crm</groupId>
+            <artifactId>gt-api-crm-svc</artifactId>
+            <version>1.0</version>
+        </dependency>             
     </dependencies>
 
     <build>

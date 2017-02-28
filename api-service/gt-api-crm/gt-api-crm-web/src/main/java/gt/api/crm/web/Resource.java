@@ -5,6 +5,7 @@
  */
 package gt.api.crm.web;
 
+import gt.api.crm.svc.Programacion;
 import javax.annotation.ManagedBean;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -18,10 +19,18 @@ import javax.ws.rs.core.MediaType;
 @ManagedBean
 @Path("/")
 public class Resource {
+
+    
     
     @GET
+    @Path("/mail")
     @Produces(MediaType.TEXT_PLAIN)
     public String getData(){
+        try {
+            new Programacion().iniciarTarea();
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
         return "Hola Mundo";
     }
 }

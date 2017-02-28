@@ -7,9 +7,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>gt-api-crm-dao</module>
-        <module>gt-api-crm.svc</module>
+        <module>gt-api-crm-svc</module>
         <module>gt-api-crm-model</module>
-    <module>gt-api-crm-web</module>
+        <module>gt-api-crm-web</module>
   </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
