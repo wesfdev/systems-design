@@ -27,11 +27,11 @@ public class Resource {
     @Path("/mail")
     @Produces(MediaType.TEXT_PLAIN)
     public String getData(){
-        try {
+        /*try {
             new Programacion().iniciarTarea();
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
-        }
+        }*/
         return "Hola Mundo";
     }
     
