@@ -5,12 +5,17 @@
  */
 package gt.api.crm.web;
 
-import gt.api.crm.svc.Programacion;
+import gt.api.crm.model.Usuario;
+import gt.api.crm.svc.Service;
+import java.util.List;
 import javax.annotation.ManagedBean;
+import javax.inject.Inject;
+import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
@@ -19,9 +24,12 @@ import javax.ws.rs.core.MediaType;
  * @author wesly
  */
 @ManagedBean
-@Path("/maricas")
+@Path("/crm")
 @Produces(MediaType.APPLICATION_JSON)
 public class Resource {
+    
+    @Inject
+    Service svc;
     
     @GET
     @Path("/mail")
@@ -36,30 +44,34 @@ public class Resource {
     }
     
     @GET
-    @Path("/nene/{test}/{monto}")
-    @Produces(MediaType.TEXT_PLAIN)
-    public String getSource(
-            @PathParam("test") String data, 
-            @PathParam("monto") Integer monto){
-            
-        Double iva = calculateIVA(monto);
-        if(data.equalsIgnoreCase("hola")){
-            return "puto" + iva;          
-        }else{
-            return "putito, no tiene iva";
-        }
+    @Path("/find-all")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Usuario> findAll(){
+        return svc.findAll();
     }
     
     
-    public Double calculateIVA(Integer value){
-        return value * 0.12;
+    @POST
+    @Path("/save")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Boolean save(Usuario usuario){
+        return svc.saveUser(usuario);
     }
     
-    @Path("/delete")
+    
+    @PUT
+    @Path("/update")
+    @Consumes(MediaType.APPLICATION_JSON)    
+    public Boolean update(Usuario usuario){
+        return svc.updateUser(usuario);
+    }
+    
+    
     @DELETE
-    @Produces(MediaType.TEXT_PLAIN)
-    public String delete(){
-        return "esto es un delete";
+    @Path("/delete")
+    @Consumes(MediaType.APPLICATION_JSON)    
+    public Boolean delete(Usuario usuario){
+        return svc.deleteUser(usuario);
     }
-    
+        
 }
