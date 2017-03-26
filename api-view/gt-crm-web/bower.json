@@ -1,0 +1,25 @@
+{
+  "name": "gt-crm-web",
+  "homepage": "https://github.com/weslyFernandez/systems-design",
+  "authors": [
+    "weslyFernandez <wesly_fernandez1@outlook.com>"
+  ],
+  "description": "Proyecto CRM Universidad Mariano Galvez de Guatemala",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.6.3",
+    "angular-resource": "1.6.3",
+    "angular-route": "1.6.3",
+    "bootstrap": "3.3.7",
+    "sweetalert": "1.1.3"
+  }
+}
