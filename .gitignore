@@ -3,3 +3,11 @@
 /api-service/gt-api-crm/gt-api-crm-dao/target/
 /api-service/gt-api-crm/gt-api-crm-web/target/
 /api-service/gt-api-crm/gt-api-crm-svc/target/
+/api-service/Microservices/gt-crm-auth/gt-auth-model/target/
+/api-service/Microservices/gt-crm-auth/gt-auth-dao/target/
+/api-service/Microservices/gt-crm-auth/gt-auth-svc/target/
+/api-service/Microservices/gt-crm-auth/gt-auth-web/target/
+/api-service/Microservices/gt-crm-customer/gt-customer-model/target/
+/api-service/Microservices/gt-crm-customer/gt-customer-dao/target/
+/api-service/Microservices/gt-crm-customer/gt-customer-svc/target/
+/api-service/Microservices/gt-crm-customer/gt-customer-web/target/
