@@ -11,3 +11,7 @@
 /api-service/Microservices/gt-crm-customer/gt-customer-dao/target/
 /api-service/Microservices/gt-crm-customer/gt-customer-svc/target/
 /api-service/Microservices/gt-crm-customer/gt-customer-web/target/
+/api-service/Microservices/gt-crm-sales/gt-sales-model/target/
+/api-service/Microservices/gt-crm-sales/gt-sales-svc/target/
+/api-service/Microservices/gt-crm-sales/gt-sales-dao/target/
+/api-service/Microservices/gt-crm-sales/gt-sales-web/target/
