@@ -15,3 +15,7 @@
 /api-service/Microservices/gt-crm-sales/gt-sales-svc/target/
 /api-service/Microservices/gt-crm-sales/gt-sales-dao/target/
 /api-service/Microservices/gt-crm-sales/gt-sales-web/target/
+/api-service/Microservices/gt-crm-statistics/gt-statistics-model/target/
+/api-service/Microservices/gt-crm-statistics/gt-statistics-dao/target/
+/api-service/Microservices/gt-crm-statistics/gt-statistics-svc/target/
+/api-service/Microservices/gt-crm-statistics/gt-statistics-web/target/
