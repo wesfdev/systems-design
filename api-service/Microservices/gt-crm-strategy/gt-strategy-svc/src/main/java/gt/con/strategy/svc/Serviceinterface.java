@@ -15,7 +15,7 @@ import java.util.List;
  */
 public interface Serviceinterface {
      public List<Usuario> findAll();
-    public Boolean deleteUsuario(BigDecimal id);
-    public Boolean updateUsuario(Usuario usuario);
-    public Boolean saveUsuario(Usuario usuario);
+//    public Boolean deleteUsuario(BigDecimal id);
+//    public Boolean updateUsuario(Usuario usuario);
+//    public Boolean saveUsuario(Usuario usuario);
 }

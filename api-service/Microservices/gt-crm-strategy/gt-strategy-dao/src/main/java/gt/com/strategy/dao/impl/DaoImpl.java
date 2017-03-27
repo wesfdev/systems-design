@@ -33,6 +33,7 @@ public class DaoImpl implements DataAccessObject{
             Query query = em.createNamedQuery("Usuario.findAll");
             return query.getResultList();
         } catch (Exception e) {
+            LOG.log(Level.SEVERE, "Error al buscar todos los usuarios" , e);
             return Collections.emptyList();
         }
     }

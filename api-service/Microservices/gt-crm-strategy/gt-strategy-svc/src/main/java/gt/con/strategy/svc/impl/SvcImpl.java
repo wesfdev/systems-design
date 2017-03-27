@@ -26,21 +26,21 @@ public class SvcImpl implements Serviceinterface{
         return dao.findAll();
     }
   
-    @Override
-    public Boolean deleteUsuario(BigDecimal id) {
-        return dao.deleteUsuario(id);
-    }
-
-    @Override
-    public Boolean updateUsuario(Usuario usuario) {
-        return dao.updateUsuario(usuario);
-    }
-
-    @Override
-    public Boolean saveUsuario(Usuario usuario) {
-        return dao.saveUsuario(usuario);
-    }
-
-  
+//    @Override
+//    public Boolean deleteUsuario(BigDecimal id) {
+//        return dao.deleteUsuario(id);
+//    }
+//
+//    @Override
+//    public Boolean updateUsuario(Usuario usuario) {
+//        return dao.updateUsuario(usuario);
+//    }
+//
+//    @Override
+//    public Boolean saveUsuario(Usuario usuario) {
+//        return dao.saveUsuario(usuario);
+//    }
+//
+//  
    
 }
