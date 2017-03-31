@@ -37,17 +37,18 @@ CREATE TABLE CRM.Area(
 	CONSTRAINT CRM_Provincia_FK_R_Area FOREIGN KEY(IdProvincia) REFERENCES CRM.Provincia(Id)
 );
 
-CREATE TABLE CRM.Direccion(
-	Id NUMBER,	
+CREATE TABLE CRM.Direccion( 
+	Id NUMBER,
 	Descripcion VARCHAR2(30),
 	IdCliente NUMBER,
-	IdProvincia NUMBER,
-	IdArea NUMBER,
+	IdProvincia NUMBER,IdArea NUMBER,
 	IdTipoDireccion NUMBER,
-	CONSTRAINT PK_Direccion_Id PRIMARY KEY (Id),
+	IdDireTipo NUMBER,
+	CONSTRAINT PK_Direccion_Id PRIMARY KEY (Id), 
 	CONSTRAINT CRM_Provincia_FK_R_Direccion FOREIGN KEY(IdProvincia) REFERENCES CRM.Provincia(Id),
-	CONSTRAINT CRM_Area_FK_R_Direccion FOREIGN KEY(IdArea) REFERENCES CRM.Area(Id),
-	CONSTRAINT CRM_Cliente_FK_R_Direccion FOREIGN KEY(IdCliente) REFERENCES CRM.Clientes(Id)
+	CONSTRAINT CRM_Area_FK_R_Direccion FOREIGN KEY(IdArea) REFERENCES CRM.Area(Id), 
+	CONSTRAINT CRM_Cliente_FK_R_Direccion FOREIGN KEY(IdCliente) REFERENCES CRM.Clientes(Id), 
+	CONSTRAINT CRM_DireTipo_FK_R_Direccion FOREIGN KEY (IdDireTipo) REFERENCES CRM.DIRETIPO (Id) 
 );
 
 CREATE SEQUENCE CRM.DireTipoSqu
