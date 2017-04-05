@@ -19,3 +19,7 @@
 /api-service/Microservices/gt-crm-statistics/gt-statistics-dao/target/
 /api-service/Microservices/gt-crm-statistics/gt-statistics-svc/target/
 /api-service/Microservices/gt-crm-statistics/gt-statistics-web/target/
+/api-service/Microservices/gt-crm-budget/gt-budget-dao/target/
+/api-service/Microservices/gt-crm-budget/gt-budget-svc/target/
+/api-service/Microservices/gt-crm-budget/gt-budget-model/target/
+/api-service/Microservices/gt-crm-budget/gt-budget-web/target/
