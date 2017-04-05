@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="es" ng-app="appCRM">
+
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
@@ -17,169 +18,175 @@
     <link href="libs/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
     <link href="libs/iCheck/skins/flat/green.css" rel="stylesheet">
-	
+
     <!-- bootstrap-progressbar -->
     <link href="libs/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
     <!-- JQVMap -->
-    <link href="libs/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+    <link href="libs/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
     <!-- bootstrap-daterangepicker -->
     <link href="libs/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="libs/dashboard/css/custom.min.css" rel="stylesheet">
-  </head>
+    <link href="libs/sweetalert/dist/sweetalert.css" rel="stylesheet">
+</head>
 
-  <body class="nav-md">
+<body class="nav-md" ng-controller="principal as vm">
     <div class="container body">
-      <div class="main_container">
-        <div class="col-md-3 left_col">
-          <div class="left_col scroll-view">
-            <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="glyphicon glyphicon-cloud"></i> <span>CRM Systems</span></a>
+        <div class="main_container">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="navbar nav_title" style="border: 0;">
+                        <a href="index.html" class="site_title"><i class="glyphicon glyphicon-cloud"></i> <span>CRM Systems</span></a>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <!-- menu profile quick info -->
+                    <div class="profile clearfix">
+                        <div class="profile_pic">
+                            <img src="images/img.png" alt="..." class="img-circle profile_img">
+                        </div>
+                        <div class="profile_info">
+                            <span>Bienvenido,</span>
+                            <h2>{{vm.usuario}}</h2>
+                        </div>
+                    </div>
+                    <!-- /menu profile quick info -->
+                    <br />
+
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+                            <h3>General</h3>
+                            <ul class="nav side-menu">
+                                <li><a><i class="fa fa-home"></i> Clientes <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="">Opcion 1</a></li>
+                                        <li><a href="">Opcion 2</a></li>
+                                        <li><a href="">Opcion 3</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-edit"></i> Ventas <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="2">Opcion 1</a></li>
+                                        <li><a href="2">Opcion 2</a></li>
+                                        <li><a href="2">Opcion 3</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-table"></i> Estrategias <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="3">Opcion 1</a></li>
+                                        <li><a href="3">Opcion 2</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a><i class="fa fa-clone"></i>Configuraciones <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="4">Opcion 1</a></li>
+                                        <li><a href="4">Opcion 2</a></li>
+                                        <li><a href="4">Opcion 3</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /sidebar menu -->
+
+                    <!-- /menu footer buttons -->
+                    <div class="sidebar-footer hidden-small">
+                        <a data-toggle="tooltip" data-placement="top" title="Configuraciones">
+                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top">
+                            <span class="glyphicon glyphicon-help" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top">
+                            <span class="glyphicon glyphicon-help" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="Salir" href="login.html">
+                            <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                    <!-- /menu footer buttons -->
+                </div>
             </div>
 
-            <div class="clearfix"></div>
+            <!-- top navigation -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <nav>
+                        <div class="nav toggle">
+                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                        </div>
 
-            <!-- menu profile quick info -->
-            <div class="profile clearfix">
-              <div class="profile_pic">
-                <img src="images/img.png" alt="..." class="img-circle profile_img">
-              </div>
-              <div class="profile_info">
-                <span>Bienvenido,</span>
-                <h2>Wesly Fernandez</h2>
-              </div>
-            </div>
-            <!-- /menu profile quick info -->
-            <br />
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="">
+                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <img src="images/img.png" alt="">Wesly Fernandez
+                                    <span class=" fa fa-angle-down"></span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                    <li><a href="javascript:;"> Perfil</a></li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="badge bg-red pull-right">50%</span>
+                                            <span>Configuraciones</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="/gt-crm-auth/#/"><i class="fa fa-sign-out pull-right"></i> Salir</a></li>
+                                </ul>
+                            </li>
 
-            <!-- sidebar menu -->
-            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-              <div class="menu_section">
-                <h3>General</h3>
-                <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i> Clientes <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="">Opcion 1</a></li>
-                      <li><a href="">Opcion 2</a></li>
-                      <li><a href="">Opcion 3</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-edit"></i> Ventas <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="2">Opcion 1</a></li>
-                      <li><a href="2">Opcion 2</a></li>
-                      <li><a href="2">Opcion 3</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-table"></i> Estrategias <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="3">Opcion 1</a></li>
-                      <li><a href="3">Opcion 2</a></li>
-                    </ul>
-                  </li>
-
-                  <li><a><i class="fa fa-clone"></i>Configuraciones <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="4">Opcion 1</a></li>
-                      <li><a href="4">Opcion 2</a></li>
-                      <li><a href="4">Opcion 3</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-            <!-- /sidebar menu -->
-
-            <!-- /menu footer buttons -->
-            <div class="sidebar-footer hidden-small">
-              <a data-toggle="tooltip" data-placement="top" title="Configuraciones">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" >
-                <span class="glyphicon glyphicon-help" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" >
-                <span class="glyphicon glyphicon-help" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="Salir" href="login.html">
-                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-              </a>
-            </div>
-            <!-- /menu footer buttons -->
-          </div>
-        </div>
-
-        <!-- top navigation -->
-        <div class="top_nav">
-          <div class="nav_menu">
-            <nav>
-              <div class="nav toggle">
-                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-              </div>
-
-              <ul class="nav navbar-nav navbar-right">
-                <li class="">
-                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/img.png" alt="">Wesly Fernandez
-                    <span class=" fa fa-angle-down"></span>
-                  </a>
-                  <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="javascript:;"> Perfil</a></li>
-                    <li>
-                      <a href="javascript:;">
-                        <span class="badge bg-red pull-right">50%</span>
-                        <span>Configuraciones</span>
-                      </a>
-                    </li>
-                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Salir</a></li>
-                  </ul>
-                </li>
-
-                <li role="presentation" class="dropdown">
-                  <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
-                    <i class="fa fa-envelope-o"></i>
-                    <span class="badge bg-green">1</span>
-                  </a>
-                  <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.png" alt="Profile Image" /></span>
-                        <span>
+                            <li role="presentation" class="dropdown">
+                                <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa fa-envelope-o"></i>
+                                    <span class="badge bg-green">1</span>
+                                </a>
+                                <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                                    <li>
+                                        <a>
+                                            <span class="image"><img src="images/img.png" alt="Profile Image" /></span>
+                                            <span>
                           <span>Edson Juarez</span>
-                          <span class="time">Hace 3 min</span>
-                        </span>
-                        <span class="message">
+                                            <span class="time">Hace 3 min</span>
+                                            </span>
+                                            <span class="message">
                           El cliente acaba de realizar una solicitud.
                         </span>
-                      </a>
-                    </li>
+                                        </a>
+                                    </li>
 
-                  </ul>
-                </li>
-              </ul>
-            </nav>
-          </div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+
+            <!-- Colocar aqui contenido del-->
+
+            <div class="right_col" role="main">
+                dasdlksajfafks df saf{ñslk sadfksdsfksf d fksa ñfks fksañkfñsdkflskfls fsfks afks ñfkñsda
+                <customer></customer>
+                <ng-view></ng-view>
+            </div>
+
+            <!-- /page content -->
+
+
+            <!-- footer content -->
+            <footer>
+                <div class="pull-right">
+                    CRM <a href="">2017</a>
+                </div>
+                <div class="clearfix"></div>
+            </footer>
+            <!-- /footer content -->
         </div>
-        <!-- /top navigation -->
-
-        <!-- page content -->
-        <div class="right_col" role="main">
-
-        </div>
-        <!-- /page content -->
-
-        <!-- footer content -->
-        <footer>
-          <div class="pull-right">
-            CRM <a href="">2017</a>
-          </div>
-          <div class="clearfix"></div>
-        </footer>
-        <!-- /footer content -->
-      </div>
     </div>
+
 
     <!-- jQuery -->
     <script src="libs/jquery/dist/jquery.min.js"></script>
@@ -221,6 +228,21 @@
 
     <!-- Custom Theme Scripts -->
     <script src="libs/dashboard/js/custom.min.js"></script>
-	
-  </body>
+
+    <!-- Angular component -->
+    <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/angular-route/angular-route.min.js"></script>
+    <script src="libs/angular-resource/angular-resource.min.js"></script>
+    <script src="libs/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- components -->
+    <script src="js/configurations/app.module.js"></script>
+    <script src="js/configurations/app.run.js"></script>
+    <script src="js/configurations/app.config.js"></script>
+    <script src="js/factories/auth.component.js"></script>
+    <script src="js/main.component/main.component.js"></script>
+    <script src="js/customerComponent/customer.component.js"></script>
+
+</body>
+
 </html>

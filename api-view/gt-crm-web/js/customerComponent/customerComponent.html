@@ -1,0 +1,43 @@
+<form>
+    <div>
+        <label class="form-label">id</label>
+        <input ng-model="vm.obj.id" type="number">
+    </div>
+
+    <div>
+        <label class="form-label">Nombre</label>
+        <input ng-model="vm.obj.name" type="text">
+    </div>
+
+
+    <div>
+        <label class="form-label">edad</label>
+        <input ng-model="vm.obj.edad" type="text">
+    </div>
+    <button type="button" class="btn btn-success" ng-click="vm.save(vm.obj)"></button>
+</form>
+
+<div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>nombre</th>
+                <th>edad</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="a in vm.array">
+                <td>{{a.id}}</td>
+                <td>{{a.name}}</td>
+                <td>{{a.edad}}</td>
+                <td>
+                    <button type="button" class="btn btn-success" ng-click="vm.save(vm.obj)">Editar</button>
+                    <button type="button" class="btn btn-danger" ng-click="vm.save(vm.obj)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
